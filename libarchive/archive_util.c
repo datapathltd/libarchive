@@ -234,7 +234,7 @@ __archive_mktempx(const char *tmpdir, wchar_t *template)
 		L'u', L'v', L'w', L'x', L'y', L'z'
 	};
 	HCRYPTPROV hProv;
-	struct archive_wstring temp_name;
+	struct archive_wstring temp_name = { 0, 0, 0 };
 	wchar_t *ws;
 	DWORD attr;
 	wchar_t *xp, *ep;
